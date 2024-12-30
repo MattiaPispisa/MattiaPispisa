@@ -10,6 +10,9 @@
 [Here’s my portfolio](http://mattiapispisa.it), a small space where I try to keep updated on what I do both professionally and in my free time.
 
 ## Projects
+<a href="https://github.com/MattiaPispisa/en-yup-decorator">
+  <img height=150 width=400 align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=MattiaPispisa&repo=en-yup-decorator&theme=transparent" />
+</a>
 <a href="https://github.com/MattiaPispisa/file_uploader">
   <img height=150 width=400 align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=MattiaPispisa&repo=file_uploader&theme=transparent" />
 </a>
