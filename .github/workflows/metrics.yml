@@ -1,20 +1,34 @@
 name: Metrics
 on:
-  schedule: [{cron: "0 0 * * *"}]
+  # Aggiorna le statistiche ogni giorno a mezzanotte
+  schedule:
+    - cron: "0 0 * * *"
+  # Permette di eseguire l'action manualmente dalla tab Actions
   workflow_dispatch:
+  # Esegue l'action su ogni push sul branch main (opzionale)
+  push:
+    branches: ["master", "main"]
 
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN }}
+
           user: MattiaPispisa
           template: classic
-          base: header, activity, community, repositories
-          repositories_pinned: 6
-          languages: yes
-          languages_limit: 8
-          languages_threshold: 0%
-          languages_details: percentage
+          base: header, activity, community, repositories, metadata
+          config_timezone: Europe/Rome
+          
+          plugin_languages: yes
+          plugin_languages_limit: 8
+          
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+
+          plugin_achievements: yes
+          plugin_achievements_display: compact
