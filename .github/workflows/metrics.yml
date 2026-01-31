@@ -41,7 +41,9 @@ jobs:
           plugin_habits_facts: yes
           plugin_habits_charts: yes
           plugin_habits_days: 14
-
+          plugin_habits_limit: 100     # less events
+          plugin_habits_trim: yes      
+          
           # --- Lines of Code ---
           # Displays the total number of lines of code contributed
           plugin_lines: yes
