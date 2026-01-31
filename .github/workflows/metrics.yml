@@ -1,11 +1,8 @@
 name: GitHub Metrics
 on:
-  # Schedule: Update daily at midnight
   schedule:
     - cron: "0 0 * * *"
-  # Manual Trigger: Allows you to run the workflow manually from the Actions tab
   workflow_dispatch:
-  # Push Trigger: Updates metrics whenever you push to main or master
   push:
     branches: ["master", "main"]
 
@@ -23,36 +20,21 @@ jobs:
           user: MattiaPispisa
           template: classic
           config_timezone: Europe/Rome
-          
-          # Base sections: header, activity, community, repositories, metadata
           base: header, activity, community, repositories, metadata
 
-          # --- Languages Section ---
-          # Analyzes languages used across repositories
+          # --- Languages Section (Filtered) ---
           plugin_languages: yes
           plugin_languages_limit: 8
-          # Exclude non-programming or markup languages for a cleaner "developer" focus
           plugin_languages_ignored: html, css, jupyter notebook, tex
-          plugin_languages_details: percentage # Display percentages for each language
+          plugin_languages_details: percentage
 
-          # --- Coding Habits ---
-          # Shows your most active hours and coding patterns
-          plugin_habits: yes
-          plugin_habits_facts: yes
-          plugin_habits_charts: yes
-          plugin_habits_days: 14
-          plugin_habits_limit: 100     # less events
-          plugin_habits_trim: yes      
-          
           # --- Lines of Code ---
-          # Displays the total number of lines of code contributed
           plugin_lines: yes
 
           # --- Calendar ---
-          # Visualizes your contribution activity over the last 6 months
           plugin_isocalendar: yes
           plugin_isocalendar_duration: half-year
 
-          # --- Final Cleanup ---
-          # Achievements are disabled to keep the profile sleek and professional
+          # --- Disabled Plugins (To avoid errors) ---
+          plugin_habits: no
           plugin_achievements: no
