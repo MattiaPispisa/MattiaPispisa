@@ -7,6 +7,7 @@
 ## 🚀 Projects
 
 - 🔗 [**crdt**](https://github.com/MattiaPispisa/crdt) 🎯 📦
+- 🔗 [**image_pipeline**](https://github.com/MattiaPispisa/image_pipeline) 🎯 📸
 - 🔗 [**rich_i18n**](https://github.com/MattiaPispisa/rich_i18n) 🎯 📚
 - 🔗 [**en-yup-decorator**](https://github.com/MattiaPispisa/en-yup-decorator) 📜
 - 🔗 [**file_uploader**](https://github.com/MattiaPispisa/file_uploader) 🎯
