@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-[🌐 Portfolio](http://mattiapispisa.it)
+[🌐 Portfolio](https://mattiapispisa.it)
 
 ![Metrics](https://github.com/MattiaPispisa/MattiaPispisa/blob/main/github-metrics.svg)
 
